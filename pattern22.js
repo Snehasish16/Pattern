@@ -1,0 +1,26 @@
+// X       X       X       X       X
+// X       _       _       _       _
+// X       X       X       X       X
+// _       _       _       _       X
+// X       X       X       X       X
+
+
+function pattern(n) {
+    let str = "";
+    for (let i = 1; i <= n; i++) {
+        for (let j = 1; j <= n; j++) {
+            if (i == 1 || i == n || i == Math.ceil(n / 2)) {
+                str += "X\t"
+            } else if (j == 1 && i<=Math.ceil(n/2)){
+                str+="X\t"
+            }else if (j == n && i>=Math.ceil(n/2)){
+                str+="X\t"
+            }else{
+                str+="_\t"
+            }
+        }
+        str+="\n"
+    }
+    console.log(str)
+}
+pattern(5);
